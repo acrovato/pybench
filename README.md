@@ -1,2 +1,3 @@
-# bench_jit
-Benchmark of just-in-time compilation in Python
+# pybench
+Benchmark of Python codes.
+- jit: just-in-time compilation using Numba, JAX and PyTorch
