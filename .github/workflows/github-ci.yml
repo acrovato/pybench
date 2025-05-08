@@ -4,9 +4,7 @@ on: [push]
 
 jobs:
   jit:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -23,3 +21,17 @@ jobs:
         run: |
           cd jit
           python run_func.py
+  ad:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+      - name: Install dependencies
+        run: python -m pip install numpy autograd jax
+      - name: Benchmark AD
+        run: |
+          cd ad
+          python run.py
