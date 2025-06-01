@@ -2,6 +2,7 @@ import test_numpy_func
 import test_numba_func
 import test_jax_func
 import test_torch_func
+import test_taichi_func
 import time
 
 def test(name, module):
@@ -30,6 +31,7 @@ def main():
     test('Numba', test_numba_func)
     test('JAX', test_jax_func)
     test('PyTorch', test_torch_func)
+    test('Taichi', test_taichi_func)
 
 if __name__ == '__main__':
     main()
